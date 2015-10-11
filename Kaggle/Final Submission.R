@@ -43,4 +43,4 @@ DescriptionWordsFullTrainCART = rpart(sold ~ ., data = DescriptionWordsTrain, me
 DescriptionWordsFullTestPred = predict(DescriptionWordsFullTrainCART, newdata = DescriptionWordsTest, method = "class")
 MyBoWSubmission = data.frame(UniqueID = ebayTest$UniqueID, Probability1 = DescriptionWordsFullTestPred[,2])
 write.csv(MyBoWSubmission, "MyBoWSubmission.csv", row.names = FALSE)
-##########################  Works fine till here except for the error in submission #################################
+
